@@ -23,6 +23,7 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
       - docker images
+      -echo Build successful
       - docker push 501886171881.dkr.ecr.us-east-1.amazonaws.com/nodejs-app-repo
       - printf '[{"name":"nodejs-container","imageUri":"%s"}]' 501886171881.dkr.ecr.us-east-1.amazonaws.com/nodejs-app-repo > imagedefinitions.json
       - cat imagedefinitions.json
