@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - $(aws ecr get-login-password --region us-east-1 --no-include-email)
+      - $(aws ecr get-login-password --region us-east-1)
       - REPOSITORY_URI=501886171881.dkr.ecr.us-east-1.amazonaws.com/nodejs-app-repo
       - docker --version
   build:
