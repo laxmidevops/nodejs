@@ -15,7 +15,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t nodejs-repo-ecr:latest .
+      - docker build -t nodejs-app-repo:latest .
       - echo Build successful 
       - docker tag nodejs-app-repo:501886171881.dkr.ecr.us-east-1.amazonaws.com/nodejs-app-repo
   post_build:
